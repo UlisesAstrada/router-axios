@@ -1,28 +1,25 @@
 import React from 'react'
-import Base from './components/Base'
-import Inicio from './components/Inicio'
 import './App.css';
+import Usuarios from './components/Usuarios'
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link
+  Link,
+  Switch,
 } from 'react-router-dom'
+
 
 function App() {
 
+  
+
   return (
     <Router>
-
-      <Link to="/inicio">Inicio</Link>
-      <Link to="/">Base</Link>
+      <Link to="/">Usuarios</Link>
 
       <Switch>
-        <Route exact path="/">
-          <Base />
-        </Route>
-        <Route path='/inicio/:nombre'>
-          <Inicio />
+        <Route path="/">
+          <Usuarios />
         </Route>
       </Switch>
     </Router>
