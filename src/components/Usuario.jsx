@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {Link, useParams} from 'react-router-dom'
 
@@ -17,7 +17,10 @@ function Usuario() {
 
   return (
     <div>
-      <h4>Usuario</h4>      
+      <h4>Usuario</h4>
+      <p>Nombre: {usuario.name}</p>
+      <p>Email: {usuario.email}</p>
+      <small>Teléfono: {usuario.phone}</small>
     </div>
   )
 }
