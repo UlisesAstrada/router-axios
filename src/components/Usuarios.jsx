@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 function Usuarios() {
 
@@ -20,7 +21,7 @@ function Usuarios() {
         {
           usuarios.map((item) => (
             <div>
-              <p>{item.name}</p>
+              <Link to={`/usuario/${item.id}`} >{item.name}</Link>
             </div>
           ))
         }      

@@ -7,19 +7,23 @@ import {
   Link,
   Switch,
 } from 'react-router-dom'
+import Usuario from './components/Usuario'
 
 
 function App() {
 
-  
+
 
   return (
     <Router>
       <Link to="/">Usuarios</Link>
 
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Usuarios />
+        </Route>
+        <Route path="/usuario/:id">
+          <Usuario />
         </Route>
       </Switch>
     </Router>
